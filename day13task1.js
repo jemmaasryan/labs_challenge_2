@@ -1,3 +1,4 @@
+//Day 13 Task 1
 /**
  * Given a year, return the century it is in. The first century spans from 
  * the year 1 up to and including the year 100, the second - from the year 
@@ -10,7 +11,7 @@ let year = 1905;
 
 function century(year) {
     if(year % 2 === 0) {
-        year = Math.floor(year/99)      //differenc between one century and the next one is 99 years
+        year = Math.floor(year/99)      //differenc between one century and the next one is 99 yearsd
     } else {
         year = Math.floor(year/99 + 1)
     }
