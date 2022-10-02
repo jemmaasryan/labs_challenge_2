@@ -9,18 +9,18 @@
 
 */
 function stars(n) {
-  let str = ""
-  let smb = "*"
+  let string = ""
+  let symbol = "*"
   for(let i = 1; i <= n; i++) {
     for(let j = n; j >= -1; j--) {
       if(i+j < n) {
-        str += smb
+        string += symbol
       } else if(i+j > n) {
-        str += smb
-      } str += " " 
+        string += symbol
+      } string += " " 
     }
-    str += "\n"
+    string += "\n"
   }
-  return str
+  return string
 }
 console.log(stars(5))
