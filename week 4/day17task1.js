@@ -8,26 +8,12 @@
  */
 
 let arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
-let N = 3
-let array = ['k']
+
 
 function rotateArray(arr, N) {
-    if(arr.length < 2) 
-        return arr
-    else {
-        for(let j = 0; j < N; j++) {
-            arr.shift(j)
-            
-        }
-        // for(let i = 0; i < arr.length; i++) {
-
-        // }
-    }
-    if(N == 0) {
-        arr
-    }
-    return arr
-   
+    let arrAfter = arr.splice(0, N)
+    let arrBefore = arr.slice(0, arr.length)
+    return [...arrBefore, ...arrAfter]
 }
 
-console.log(rotateArray(arr));
+console.log(rotateArray(arr, 3));
