@@ -11,7 +11,7 @@
 
 const word = 'abc';
 
-const mirrorString = word => {
+const alphaMirror = word => {
     const regex = /[A-Za-z]/g;
     return word.replace(regex, char => {
         const ascii = char.charCodeAt();
@@ -26,5 +26,5 @@ const mirrorString = word => {
           return String.fromCharCode(end - (ascii-start));
        });
     }
-console.log(mirrorString(word));
-console.log(mirrorString('My horse is Amazing'));
+console.log(alphaMirror(word));
+console.log(alphaMirror('My horse is Amazing'));
