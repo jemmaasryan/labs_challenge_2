@@ -7,15 +7,14 @@ const arr = [4,2,34,4,1,12,1,4] // return [4, 1]
 const arr = [4, 2, 34, 4, 1, 12, 1, 4]
 
 function find(arr) {
-    let sorted = arr.slice().sort();  
+    let obj = arr.reduce((key, val) => {
+        key[val] = key[val] ? key[val] + 1 : 1
+        return key 
+    }, {});
     
-    let results = [];
-    for (let i = 0; i < sorted.length - 1; i++) {
-      if (sorted[i + 1] == sorted[i]) {
-        results.push(sorted[i]);
-      }
-    }
-    return results;
-  }
-  
-console.log(find(arr));
+
+    let final = Object.keys(obj).filter((val) => obj[val] > 1)
+    console.log(final)
+}
+
+find(arr);
